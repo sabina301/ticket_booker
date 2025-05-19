@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск рейсов - AirBooking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">AirBooking</a>
+                <ul class="nav-links">
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/flights.html" class="active">Рейсы</a></li>
+                    <li><a href="/profile.html" id="profileLink" style="display: none;">Профиль</a></li>
+                    <li><a href="#" id="loginLink" class="btn-login">Войти</a></li>
+                    <li><a href="#" id="registerLink" class="btn-register">Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="flights-section">
+            <div class="container">
+                <div class="search-results">
+                    <h1>Результаты поиска</h1>
+                    <div class="search-summary" id="searchSummary">
+                        <!-- Will be filled by JavaScript -->
+                    </div>
+                    
+                    <div class="flights-list" id="flightsList">
+                        <!-- Will be filled by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 AirBooking. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для входа -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход в систему</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="text" id="username" placeholder="Имя пользователя" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Пароль" required>
+                </div>
+                <button type="submit" class="btn-submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/flights.js"></script>
+</body>
+</html> 

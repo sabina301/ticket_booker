@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали рейса - AirBooking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">AirBooking</a>
+                <ul class="nav-links">
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/flights.html">Рейсы</a></li>
+                    <li><a href="/profile.html" id="profileLink" style="display: none;">Профиль</a></li>
+                    <li><a href="#" id="loginLink" class="btn-login">Войти</a></li>
+                    <li><a href="#" id="registerLink" class="btn-register">Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="flight-details-section">
+            <div class="container">
+                <div class="flight-info" id="flightInfo">
+                    <!-- Will be filled by JavaScript -->
+                </div>
+                
+                <div class="seat-selection">
+                    <h2>Выбор места</h2>
+                    <div class="airplane-layout">
+                        <div class="seats-grid" id="seatsGrid">
+                            <!-- Will be filled by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="seat-legend">
+                        <div class="legend-item">
+                            <div class="seat-example available"></div>
+                            <span>Свободно</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="seat-example selected"></div>
+                            <span>Выбрано вами</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="seat-example occupied"></div>
+                            <span>Занято</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="booking-summary" id="bookingSummary" style="display: none;">
+                    <h2>Информация о бронировании</h2>
+                    <div class="summary-details">
+                        <p>Выбранное место: <span id="selectedSeat">-</span></p>
+                        <p>Стоимость: <span id="ticketPrice">-</span></p>
+                    </div>
+                    <button id="bookButton" class="btn-book">Забронировать</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 AirBooking. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для входа -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход в систему</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="text" id="username" placeholder="Имя пользователя" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Пароль" required>
+                </div>
+                <button type="submit" class="btn-submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно подтверждения бронирования -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Подтверждение бронирования</h2>
+            <div class="confirmation-details">
+                <!-- Will be filled by JavaScript -->
+            </div>
+            <div class="confirmation-actions">
+                <button id="confirmBooking" class="btn-confirm">Подтвердить</button>
+                <button id="cancelBooking" class="btn-cancel">Отменить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/flight-details.js"></script>
+</body>
+</html> 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль - AirBooking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">AirBooking</a>
+                <ul class="nav-links">
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/flights.html">Рейсы</a></li>
+                    <li><a href="/profile.html" id="profileLink" class="active">Профиль</a></li>
+                    <li><a href="#" id="logoutLink" class="btn-logout">Выйти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="profile-section">
+            <div class="container">
+                <div class="profile-info" id="profileInfo">
+                    <!-- Will be filled by JavaScript -->
+                </div>
+                
+                <div class="bookings-section">
+                    <h2>Мои бронирования</h2>
+                    <div class="bookings-list" id="bookingsList">
+                        <!-- Will be filled by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 AirBooking. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html> 
